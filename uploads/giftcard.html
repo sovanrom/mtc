@@ -1,0 +1,22 @@
+
+ <div class="col-xs-3"> 
+    <ul class="nav nav-tabs tabs-left">
+      <?php foreach ($giftcards as $giftcard): ?>
+      	<li class="<?php echo ($giftcard->id == 3)  ? 'active': ''; ?>">
+      		<a href="#<?php echo $giftcard->id; ?>" data-toggle="tab">
+      			<?php echo $giftcard->name; ?>
+      		</a>
+      	</li>
+      <?php endforeach ?>
+    </ul>
+</div>
+
+<div class="col-xs-9">
+    <div class="tab-content">
+      <?php foreach ($giftcards as $giftcard): ?>
+      		<div class="tab-pane <?php echo ($giftcard->id == 3) ? 'active': ''; ?>" id="<?php echo $giftcard->id; ?>">
+      			<?php echo $giftcard->description; ?>
+      		</div>
+      <?php endforeach ?>
+    </div>
+</div>

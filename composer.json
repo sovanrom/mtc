@@ -1,0 +1,7 @@
+{
+	"name": "codeigniter/framework",
+	"description": "The CodeIgniter framework",
+	"require": {
+		"tightenco/collect": "^6.1"
+	}
+}
