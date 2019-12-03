@@ -42,7 +42,7 @@
                 <?php $this->load->view('apps/sidebar/menu'); ?>
             </section>
         </aside>
-
+             <h3 align="center" style="color: white"><img src="<?php echo base_url(); ?>assets/themes/img/MTC.jpg"> <b>Master Tech Computer Backend Website</b> </h3>
         <div class="content-wrapper">
             <?php $this->load->view('apps/breadcrumb'); ?>
             <?php isset($content) ? $this->load->view($content) : ''; ?>

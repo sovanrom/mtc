@@ -24,7 +24,7 @@ date_default_timezone_set('Asia/Phnom_Penh');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/phone/';
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mtc/';
 
 /*
 |--------------------------------------------------------------------------
