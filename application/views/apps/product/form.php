@@ -39,6 +39,21 @@
         </div><br>
 
         <div class="row">
+            <div class="form-group">
+                <div class="col-sm-3">
+                    <label for="category">Brand</label>
+                </div>
+                <div class="col-sm-9">
+                    <select class="form-control">
+                        <option>Laptops</option>
+                        <option>Accessories</option>
+                        <option>Desktop Spare Part</option>
+                    </select>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="description">Description</label>
