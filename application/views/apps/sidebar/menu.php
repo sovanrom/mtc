@@ -35,8 +35,7 @@
              </ul>
     </li>
 
-    </li>
-     <li class="<?php echo ($active == 'about') ? 'active': ''; ?>">
+    <li class="<?php echo ($active == 'about') ? 'active': ''; ?>">
         <a href="<?php echo base_url(); ?>about"><i class="fa fa-sign-out"></i>About</a>
     </li>
 

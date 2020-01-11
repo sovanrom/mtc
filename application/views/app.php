@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mater Tech Computer</title>
+    <title>My Phone Shop</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/themes/img/MTC.jpg" type="image/x-icon">
     <link rel="icon" href="<?php echo base_url(); ?>assets/themes/img/MTC.jpg" type="image/x-icon">
@@ -34,7 +34,7 @@
         <header class="main-header">
             <a href="<?php echo base_url(); ?>" class="logo">
                <!--  <span class="logo-mini"><b>P</b></span> -->
-                <span class="logo-lg"><b>Master Tech Computer</b></span>
+                <span class="logo-lg"><b>To Website</b></span>
             </a>
         </header>
         <aside class="main-sidebar">
@@ -42,7 +42,7 @@
                 <?php $this->load->view('apps/sidebar/menu'); ?>
             </section>
         </aside>
-             <h3 align="center" style="color: white"><img src="<?php echo base_url(); ?>assets/themes/img/MTC.jpg"> <b>Master Tech Computer Backend Website</b> </h3>
+             <h3 align="center" style="color: white; font-family:  'Times New Roman', Times, serif;"><b>My Phone Shop</b> </h3>
         <div class="content-wrapper">
             <?php $this->load->view('apps/breadcrumb'); ?>
             <?php isset($content) ? $this->load->view($content) : ''; ?>
