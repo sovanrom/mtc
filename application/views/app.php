@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Phone Shop</title>
+    <title>Lemon Case</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/themes/img/MTC.jpg" type="image/x-icon">
     <link rel="icon" href="<?php echo base_url(); ?>assets/themes/img/MTC.jpg" type="image/x-icon">
@@ -30,11 +30,11 @@
     </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+    <div class="wrapper" style="background:green;">
         <header class="main-header">
             <a href="<?php echo base_url(); ?>" class="logo">
                <!--  <span class="logo-mini"><b>P</b></span> -->
-                <span class="logo-lg"><b>To Website</b></span>
+                <span class="logo-lg"><b>To Lemon Case</b></span>
             </a>
         </header>
         <aside class="main-sidebar">
@@ -42,7 +42,7 @@
                 <?php $this->load->view('apps/sidebar/menu'); ?>
             </section>
         </aside>
-             <h3 align="center" style="color: white; font-family:  'Times New Roman', Times, serif;"><b>My Phone Shop</b> </h3>
+             <h3 align="center" style="color: white; font-family:  'Times New Roman', Times, serif;"><b>Lemon Case Store</b> </h3>
         <div class="content-wrapper">
             <?php $this->load->view('apps/breadcrumb'); ?>
             <?php isset($content) ? $this->load->view($content) : ''; ?>

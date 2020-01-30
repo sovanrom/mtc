@@ -10,8 +10,8 @@
                                 <th class="col-xs-1">#</th>
                                 <th class="col-xs-1">Name</th>
                                 <th class="col-xs-1">Price</th>  
+                                <th class="col-xs-1">Category</th>  
                                 <th class="col-xs-1">Description</th>
-                                <th class="col-xs-1">Status</th>
                                 <th class="col-xs-1">Actions</th>
                             </tr>
                         </thead>

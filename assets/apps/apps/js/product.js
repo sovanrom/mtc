@@ -17,23 +17,13 @@ $(function () {
         },
         columns: [
             {data: 'id', visible: false},
-            {data: 'code', width:'1%', bSortable:false},
-            {data: 'latin', bSortable:false},
-            {data: 'unit', bSortable:false},
-            {data: 'alert_quantity', bSortable:false},
-            {data: 'category', bSortable:true},
-            {data: 'description', bSortable:false},
-            {
-                data: 'status', bSortable:false,
-                fnCreatedCell: function (nTd, sData, oData, iRow, iCol){
-                    (oData.status === '1') ? $(nTd).html('<i class="fa fa-check"></i>') : $(nTd).html('');
-                },
-                class: 'text-center',
-                width: '1%'
-            },
+            {data: 'name'},
+            {data: 'price'},
+            {data: 'category_id'},
+            {data: 'description'},
             {data: 'Actions', searchable: false, orderable: false, width: '1%', bSortable:false}
         ],
-        order:[[5, "asc"]]
+        // order:[[5, "asc"]]
 
     });
 
@@ -51,7 +41,8 @@ $(function () {
             }
         });
     });
- $('#breadcrumb').on('click', "a[rel='add']", function(event) {
+ 
+     $('#breadcrumb').on('click', "a[rel='add']", function(event) {
         event.preventDefault();
         $.ajax({
             url: $(this).attr('href'),
@@ -76,7 +67,7 @@ $(function () {
             processData: false,
             contentType: false,
             success: function(response) {
-                if (response.status == '1') {
+                if (response== '1') {
                     $('#bean_modal').modal('hide');
                     $('#product').DataTable().ajax.reload();
                 }

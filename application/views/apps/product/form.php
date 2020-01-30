@@ -1,5 +1,14 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-        <div class="row">
+        <div class="form-group">
+            <div class="col-sm-3">
+            <label for="code">Code</label>
+            </div>
+            <div class="col-sm-9">
+            <input type="text" name="code" id="code" value="<?php echo isset($product) ? $product->code : ''; ?>" class="form-control">
+            <span class="help-block error-message"></span>
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="col-sm-3">
             <label for="name">Name</label>
@@ -9,9 +18,7 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-        </div>
 
-        <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="price">Price</label>
@@ -21,51 +28,34 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-        </div>
 
         <div class="row">
-            <div class="form-group">
+        <div class="form-group">
                 <div class="col-sm-3">
                     <label for="category">Category</label>
                 </div>
                 <div class="col-sm-9">
-                    <select class="form-control">
-                        <option>Laptops</option>
-                        <option>Accessories</option>
-                        <option>Desktop Spare Part</option>
+                    <select class="form-control" name="category_id">
+                        <option value="">-</option>
+                        <?php foreach ($categories as $category) : ?>
+                            <option value="<?php echo $category->id ?>" <?php echo isset($product)? ($product->category_id==$category->id)? 'selected': '' :''; ?>><?php echo $category->name; ?></option>
+                        <?php endforeach ?>
                     </select>
                 </div>
-            </div>
+        </div>
         </div><br>
 
-        <div class="row">
-            <div class="form-group">
-                <div class="col-sm-3">
-                    <label for="category">Brand</label>
-                </div>
-                <div class="col-sm-9">
-                    <select class="form-control">
-                        <option>Laptops</option>
-                        <option>Accessories</option>
-                        <option>Desktop Spare Part</option>
-                    </select>
-                </div>
-            </div>
-        </div><br>
 
-        <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="description">Description</label>
             </div>
             <div class="col-sm-9">
-            <textarea rows="3" name="latin" id="latin" value="<?php echo isset($product) ? $product->latin : ''; ?>" class="form-control"></textarea>
+            <textarea rows="3" name="description" id="description" value="<?php echo isset($product) ? $product->description : ''; ?>" class="form-control"><?php   echo isset($product) ? $product->description : ''; ?></textarea>
             <span class="help-block error-message"></span>
             </div>
         </div>
-        </div>
 
-        <div class="row">
         <div class="form-group">
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
@@ -76,9 +66,7 @@
             <?php endif ?>
             </div>
         </div>
-        </div>
 
-        <div class="row">
         <div class="form-group">
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
@@ -89,9 +77,7 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-        </div>
 
-        <div class="row">
         <div class="form-group">
             <div class="col-sm-3"></div>
             <div class="col-sm-3">
@@ -106,7 +92,6 @@
                 Active?
             </label>
             </div>
-        </div>
         </div>
 
 

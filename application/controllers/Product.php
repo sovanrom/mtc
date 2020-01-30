@@ -36,20 +36,21 @@ class Product extends MY_Controller {
 				move_uploaded_file($_FILES['image']['tmp_name'], './uploads/products/'. $image . '.' . $extention);	
 			}
 			$product = array(
-				'name'         => $this->input->post('name'),
-				'price'          => $this->input->post('price'),
-				'category'=> $this->input->post('category'),
+				'name'          => $this->input->post('name'),
+				'code'          => $this->input->post('code'),
+				'price'         => $this->input->post('price'),
+				'category_id'   => $this->input->post('category_id'),
 				'description'   => $this->input->post('description'),
 				'image'         => (($image !="") ? $image. '.'.$extention : ""),
 				'created_at'    =>$this->timestamp,
 				'created_by'    =>$this->user,
-				'status'        => ($this->input->post('status') == 'on') ? 1 : 0
 			);
             $message = $this->product->insert('products',$product);
             echo json_encode($message);
             return true;
 		}
-		$this->load->view('apps/product/create');
+		$data['categories']=$this->product->select('categories');
+		$this->load->view('apps/product/create',$data);
 	}
 
 
@@ -63,26 +64,27 @@ class Product extends MY_Controller {
 				$extention = explode('.', $file_name);
 				$extention = end($extention);
 				$image = $this->input->post('code');
-				if (file_exists('uploads/products/'.$this->input->post('file_name'))) 
-					unlink('uploads/products/'.$this->input->post('file_name'));
+				if (file_exists('uploads/products/'.$this->input->post('file_name')));
 					move_uploaded_file($_FILES['image']['tmp_name'], './uploads/products/'. $image . '.' . $extention);	
 			}
 			
 			$product = array(
-				'name'         => $this->input->post('name'),
-				'price'          => $this->input->post('price'),
-				'category'=> $this->input->post('category'),
+				'name'          => $this->input->post('name'),
+				'code'          => $this->input->post('code'),
+				'price'         => $this->input->post('price'),
+				'category_id'   => $this->input->post('category_id'),
 				'description'   => $this->input->post('description'),
 				'image'         => (($image !="") ? $image. '.'.$extention : ""),
 				'updated_at'    =>$this->timestamp,
 				'updated_by'    =>$this->user,
 				'status'        => ($this->input->post('status') == 'on') ? 1 : 0
 			);
-            $message = $this->product->Update('products', $product, $id);
+            $message = $this->product->update('products', $product,'id', $id);
 			echo json_encode($message);
 			return true;
 		}
-		$data['product']        = $this->product->get_by_id('products', $id);
+		$data['product']= $this->product->get_by_id('products', $id);
+		$data['categories']=$this->product->select('categories');
 		$this->load->view('apps/product/edit', $data);
 	}
 }
