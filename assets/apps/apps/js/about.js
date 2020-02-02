@@ -1,7 +1,7 @@
 $(function () {
 
     $('input[type="checkbox"]').iCheck();
-    var table =$('#product').DataTable({
+    var table =$('#about').DataTable({
         pagingType: "full_numbers",
         lengthMenu: [
             [10, 25, 50, -1],
@@ -12,14 +12,12 @@ $(function () {
         processing: true,
         serverSide: true,
         ajax: {
-                url: base_url + 'product/get_all',
+                url: base_url + 'about/get_all',
                 type: 'POST'
         },
         columns: [
             {data: 'id', visible: false},
             {data: 'name'},
-            {data: 'price'},
-            {data: 'category_id'},
             {data: 'description'},
             {data: 'Actions', searchable: false, orderable: false, width: '1%', bSortable:false}
         ],
@@ -60,16 +58,16 @@ $(function () {
    
    function createUpdate() {      
         $.ajax({
-            url: $('#form_product').attr('action'),
+            url: $('#form_about').attr('action'),
             type: 'POST',
             dataType: 'json',
-           data: new FormData($('#form_product')[0]),
+           data: new FormData($('#form_about')[0]),
             processData: false,
             contentType: false,
             success: function(response) {
                 if (response== '1') {
                     $('#bean_modal').modal('hide');
-                    $('#product').DataTable().ajax.reload();
+                    $('#about').DataTable().ajax.reload();
                 }
             }
         });
@@ -90,7 +88,7 @@ $(function () {
                 type: 'POST',
                 dataType: 'json',
                 success: function(response) {
-                    (response.status == '1') ? $('#product').DataTable().ajax.reload() : '';
+                    (response.status == '1') ? $('#about').DataTable().ajax.reload() : '';
                 }
             });
         }

@@ -2,8 +2,8 @@
 <div class="row header">
   <div class="col-sm-6" style="text-align: left;">
      <ul >
-       <li>ABOUT AS</li>
-       <li>CONTACT US</li>
+       <li><a href="#" id="about">ABOUT US</a></li>
+       <li><a href="#" id="contact">CONTACT US</a></li>
      </ul>
   </div>
   <div class="col-sm-6" style="text-align:right;">
@@ -20,8 +20,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li ><a href="#">Smart Phone</a></li>
-        <li><a href="#">Accesory</a></li>
+        <li ><a href="#">Apple</a></li>
+        <li><a href="#">Sumsung</a></li>
+        <li><a href="#">Huawei</a></li>
+        <li><a href="#">Oppo</a></li>
+        <li><a href="#">Vivo</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
