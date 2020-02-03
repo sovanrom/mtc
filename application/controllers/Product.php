@@ -49,6 +49,7 @@ class Product extends MY_Controller {
             echo json_encode($message);
             return true;
 		}
+		$data['user'] = $this->user;
 		$data['categories']=$this->product->select('categories');
 		$this->load->view('apps/product/create',$data);
 	}
@@ -77,12 +78,15 @@ class Product extends MY_Controller {
 				'image'         => (($image !="") ? $image. '.'.$extention : ""),
 				'updated_at'    =>$this->timestamp,
 				'updated_by'    =>$this->user,
-				'status'        => ($this->input->post('status') == 'on') ? 1 : 0
+				'status'        => ($this->input->post('status') == 'on') ? 1 : 0,
+				'active'        => ($this->input->post('is_active') == 'on') ? 1 : 0,
+				'is_new'        => ($this->input->post('is_new') == 'on') ? 1 : 0
 			);
             $message = $this->product->update('products', $product,'id', $id);
 			echo json_encode($message);
 			return true;
 		}
+		$data['user'] = $this->user;
 		$data['product']= $this->product->get_by_id('products', $id);
 		$data['categories']=$this->product->select('categories');
 		$this->load->view('apps/product/edit', $data);

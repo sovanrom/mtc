@@ -48,7 +48,7 @@
             <?php isset($content) ? $this->load->view($content) : ''; ?>
         </div>
         <?php $this->load->view('apps/modal'); ?>
-        <!-- <?php $this->load->view('apps/footer'); ?> -->
+        <?php $this->load->view('apps/footer'); ?>
     </div>
 
     <script src="<?php echo base_url(); ?>assets/apps/plugins/jquery/jquery.min.js"></script>

@@ -40,6 +40,21 @@
     	.style{
     		background: #cdcdb1;        
     	}
+    	img {
+    	  border-radius: 8px;
+    	}
+
+    	div.polaroid {
+    	  width: 200px;
+    	  background-color: white;
+    	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    	  margin-bottom: 25px;
+    	}
+
+    	div.text {
+    	  text-align: center;
+    	  padding: 10px 20px;
+    	}
     </style>
 </head>
 <body >	
@@ -50,10 +65,11 @@
 		<?php $this->load->view('themes/header'); ?>	
 		<!-- Main Content -->
 		<?php $this->load->view('themes/main'); ?>
+        <?php $this->load->view('apps/modal'); ?>
 	
 	<footer >
 	<!-- Footer -->
-	<?php $this->load->view('themes/footer'); ?>
+	<!-- <?php $this->load->view('themes/footer'); ?> -->
 	<!-- Analytics -->
 	</footer>
 	

@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-        
+<div class="container-fluid">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="name">Name</label>
@@ -34,7 +34,7 @@
             </label>
             </div>
         </div>
-
+</div>
 
 <style type="text/css">
     input{

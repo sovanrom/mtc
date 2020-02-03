@@ -1,17 +1,19 @@
 $(document).ready(function() {
-	$(document).on('click', '.description', function(event) {
+	$('#about').on('click', function(event) {
 		event.preventDefault();
-		// $('#description').html($(this).attr('href'));
 		$.ajax({
-			url: base_url+'condition_use/get_descriptionById',
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				id: $(this).attr('href')
-			},
-			success: function (response) {
-				$('#description').html(response[0]['description'])
-			}
-		});
+            url: $(this).attr('href'),
+            type: 'GET',
+            dataType: 'html',
+            success: function(html) {
+                $('#bean_modal').find('.modal-title').html('');
+                $('#bean_modal').find('.modal-body').html(html);
+                $('#bean_modal').modal('show');
+            }
+        });
 	});
+    $('#bean_modal').on('show.bs.modal', function() {
+        $('.modal-footer').hide();
+
+    });
 });

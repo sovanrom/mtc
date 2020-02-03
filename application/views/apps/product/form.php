@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<div class="container-fluid">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="code">Code</label>
@@ -29,11 +30,8 @@
             </div>
         </div>
 
-        <div class="row">
         <div class="form-group">
-                <div class="col-sm-3">
-                    <label for="category">Category</label>
-                </div>
+                    <label class="col-sm-3" for="category">Category</label>
                 <div class="col-sm-9">
                     <select class="form-control" name="category_id">
                         <option value="">-</option>
@@ -43,8 +41,6 @@
                     </select>
                 </div>
         </div>
-        </div><br>
-
 
         <div class="form-group">
             <div class="col-sm-3">
@@ -86,13 +82,22 @@
                 Status
             </label>
             </div>
+            <div style="display:<?php echo isset($user)? ($user !== '1')? 'none': '':''; ?>">
             <div class="col-sm-3">
             <label>
-                <input type="checkbox" id="is_active" name="is_active" class="minimal">
+                <input type="checkbox" id="is_active" name="is_active" <?php echo isset($product) ? $product->active == 1 ? 'checked': '' : 'checked'; ?> class="minimal">
                 Active?
             </label>
             </div>
+            <div class="col-sm-3">
+            <label>
+                <input type="checkbox" id="is_new" name="is_new" <?php echo isset($product) ? $product->is_new == 1 ? 'checked': '' : 'checked'; ?> class="minimal">
+                Is_New?
+            </label>
+            </div>
+            </div>
         </div>
+</div>
 
 
 <style type="text/css">

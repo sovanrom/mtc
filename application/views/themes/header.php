@@ -2,7 +2,7 @@
 <div class="row header">
   <div class="col-sm-6" style="text-align: left;">
      <ul >
-       <li><a href="#" id="about">ABOUT US</a></li>
+       <li><a href="<?php echo base_url(); ?>home/about_us" id="about">ABOUT US</a></li>
        <li><a href="#" id="contact">CONTACT US</a></li>
      </ul>
   </div>
@@ -20,11 +20,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li ><a href="#">Apple</a></li>
-        <li><a href="#">Sumsung</a></li>
-        <li><a href="#">Huawei</a></li>
-        <li><a href="#">Oppo</a></li>
-        <li><a href="#">Vivo</a></li>
+        <li ><a href="#apple">Apple</a></li>
+        <li><a href="#samsung">Sumsung</a></li>
+        <li><a href="#huawei">Huawei</a></li>
+        <li><a href="#oppo">Oppo</a></li>
+        <li><a href="#vivo">Vivo</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
