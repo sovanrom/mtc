@@ -60,7 +60,7 @@ class Product extends MY_Controller {
 		if (!empty($this->input->post())) {
 			$image = '';
 			$extention = '';
-			$file_name = isset($_FILES["image"]["name"]) ? $_FILES["image"]["name"] : '' ;
+			$file_name = ($_FILES["image"]["name"] == null) ? $this->input->post('file_name') :$_FILES["image"]["name"]  ;
 			if ($file_name != '') {
 				$extention = explode('.', $file_name);
 				$extention = end($extention);
@@ -81,7 +81,7 @@ class Product extends MY_Controller {
 				'status'        => ($this->input->post('status') == 'on') ? 1 : 0,
 				'active'        => ($this->input->post('is_active') == 'on') ? 1 : 0,
 				'is_new'        => ($this->input->post('is_new') == 'on') ? 1 : 0
-			);
+			);		
             $message = $this->product->update('products', $product,'id', $id);
 			echo json_encode($message);
 			return true;

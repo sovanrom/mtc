@@ -85,13 +85,13 @@
             <div style="display:<?php echo isset($user)? ($user !== '1')? 'none': '':''; ?>">
             <div class="col-sm-3">
             <label>
-                <input type="checkbox" id="is_active" name="is_active" <?php echo isset($product) ? $product->active == 1 ? 'checked': '' : 'checked'; ?> class="minimal">
+                <input type="checkbox" id="is_active" name="is_active" <?php echo isset($product) ? $product->active == 1 ? 'checked': '' : ''; ?> class="minimal">
                 Active?
             </label>
             </div>
             <div class="col-sm-3">
             <label>
-                <input type="checkbox" id="is_new" name="is_new" <?php echo isset($product) ? $product->is_new == 1 ? 'checked': '' : 'checked'; ?> class="minimal">
+                <input type="checkbox" id="is_new" name="is_new" <?php echo isset($product) ? $product->is_new == 1 ? 'checked': '' : ''; ?> class="minimal">
                 Is_New?
             </label>
             </div>
