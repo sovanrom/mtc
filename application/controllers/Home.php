@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 	{
 		
 		$data['new_products'] = $this->get_new_product();
+		$data['apples'] = $this->apple();
 		$this->load->view('theme',$data);
 	}
 	protected function get_new_product()
@@ -16,6 +17,20 @@ class Home extends CI_Controller {
 				 ->where('status', 1)
 				 ->where('active', 1)
 				 ->where('is_new', 1);
+		return $this->db->get()->result();
+	}
+
+	protected function apple()
+	{
+		$this->db->select('products.id')	
+				 ->select('products.price')	
+				 ->select('products.description')	
+				 ->select('products.image')	
+				 ->from('products')
+				 ->where('products.status', 1)
+				 ->where('products.active', 1)
+				 ->where('categories.name', 'Apple')
+				 ->join('categories', 'categories.id = products.category_id');
 		return $this->db->get()->result();
 	}
 

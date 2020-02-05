@@ -44,6 +44,8 @@ class Product extends MY_Controller {
 				'image'         => (($image !="") ? $image. '.'.$extention : ""),
 				'created_at'    =>$this->timestamp,
 				'created_by'    =>$this->user,
+				'active'        => ($this->input->post('is_active') == 'on') ? 1 : 0,
+				'is_new'        => ($this->input->post('is_new') == 'on') ? 1 : 0
 			);
             $message = $this->product->insert('products',$product);
             echo json_encode($message);

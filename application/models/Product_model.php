@@ -7,13 +7,14 @@ class Product_model extends MY_Model {
 	{
 		$this->load->library('datatables');
 		$this->datatables->select('products.id')
-		->select('products.name')
-		->select('price')
-		->select('products.description')
-		->select('categories.id as category_id')
-		->where('products.status',1)
-		->from('products')
-        ->join('categories', 'categories.id = products.category_id');
+						->select('products.code')
+						->select('products.name')
+						->select('price')
+						->select('products.description')
+						->select('categories.id as category_id')
+						->where('products.status',1)
+						->from('products')
+				        ->join('categories', 'categories.id = products.category_id');
 		$this->datatables->add_column(
 			"Actions",
 			"<div class='text-center'>

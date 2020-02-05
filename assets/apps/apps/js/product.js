@@ -17,6 +17,7 @@ $(function () {
         },
         columns: [
             {data: 'id', visible: false},
+            {data: 'code'},
             {data: 'name'},
             {data: 'price'},
             {data: 'category_id'},
