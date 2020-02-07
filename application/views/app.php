@@ -42,7 +42,7 @@
                 <?php $this->load->view('apps/sidebar/menu'); ?>
             </section>
         </aside>
-             <h3 align="center" style="color: white; font-family:  'Times New Roman', Times, serif;"><b>Lemon Case Store</b> </h3>
+             <h3 align="center"  style="color: white; font-family:  'Times New Roman', Times, serif;"><b>Lemon Case Store</b> </h3>
         <div class="content-wrapper">
             <?php $this->load->view('apps/breadcrumb'); ?>
             <?php isset($content) ? $this->load->view($content) : ''; ?>

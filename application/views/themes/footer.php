@@ -8,7 +8,7 @@
       <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
         <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold">Our Phone Shop</h6>
+        <h6 class="text-uppercase font-weight-bold">Our Case Shop</h6>
         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>We provide the best phone service in town</p>
 
@@ -22,10 +22,7 @@
         <h6 class="text-uppercase font-weight-bold">Facility</h6>
         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a class="dark-grey-text" href="#!">Smart Phone</a>
-        </p>
-        <p>
-          <a class="dark-grey-text" href="#!">Accesories</a>
+          <a class="dark-grey-text" href="#!">Smart Phone Cases</a>
         </p>
 
       </div>
@@ -39,9 +36,6 @@
         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
           <a class="dark-grey-text" href="https://www.facebook.com/profile.php?id=100009062784287&ref=bookmarks">Facebook</a>
-        </p>
-        <p>
-          <a class="dark-grey-text" href="https://www.youtube.com/channel/UCpUQ4mppNJoEFhZlXoBL5vQ">Youtube</a>
         </p>
 
       </div>

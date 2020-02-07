@@ -3,7 +3,7 @@
   <div class="col-sm-6" style="text-align: left;">
      <ul >
        <li><a href="<?php echo base_url(); ?>home/about_us" id="about">ABOUT US</a></li>
-       <li><a href="#" id="contact">CONTACT US</a></li>
+       <li><a href="<?php echo base_url(); ?>home/contact" id="contact">CONTACT US</a></li>
      </ul>
   </div>
   <div class="col-sm-6" style="text-align:right;">

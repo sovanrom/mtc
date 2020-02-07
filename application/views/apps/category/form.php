@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-    <div class="container-fluid">    
+    <div class="container-fluid">
+    <div class="row">    
         <div class="form-group">
             <div class="col-sm-3">
             <label for="name">Name</label>
@@ -9,9 +10,23 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-
-       
-
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-3">
+            <label for="name">Parent</label>
+            </div>
+            <div class="col-sm-9">
+            <select name="parent" class="form-control">
+                <option value="">-</option>
+                <?php foreach ($categories as $cat) : ?>
+                    <option value="<?php echo $cat->id ?>" <?php echo isset($category)? ($category->parent==$cat->id)? 'selected':'':''; ?>><?php echo $cat->name; ?></option>
+                <?php endforeach ?>
+            </select>
+            </div>
+        </div>
+    </div><br>
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="description">Description</label>
@@ -21,6 +36,7 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
+    </div>
 
 
         <div class="form-group">

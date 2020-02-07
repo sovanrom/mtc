@@ -28,13 +28,15 @@ class Category extends MY_Controller {
 		if (!empty($this->input->post())) {
 			$category = array(
 				'name'          => $this->input->post('name'),
+				'parent'          => $this->input->post('parent'),
 				'description'   => $this->input->post('description'),
 			);
             $message = $this->category->insert('categories',$category);
             echo json_encode($message);
             return true;
 		}
-		$this->load->view('apps/category/create');
+		$data['categories'] = $this->category->getCat();
+		$this->load->view('apps/category/create',$data);
 	}
 
 
@@ -43,6 +45,7 @@ class Category extends MY_Controller {
 		if (!empty($this->input->post())) {
 			$category = array(
 				'name'          => $this->input->post('name'),
+				'parent'          => $this->input->post('parent'),
 				'description'   => $this->input->post('description'),
 				'status'        => ($this->input->post('status') == 'on') ? 1 : 0
 			);
@@ -50,6 +53,7 @@ class Category extends MY_Controller {
 			echo json_encode($message);
 			return true;
 		}
+		$data['categories'] = $this->category->getCat();
 		$data['category']= $this->category->get_by_id('categories', $id);
 		$this->load->view('apps/category/edit', $data);
 	}

@@ -52,7 +52,7 @@ class Product extends MY_Controller {
             return true;
 		}
 		$data['user'] = $this->user;
-		$data['categories']=$this->product->select('categories');
+		$data['categories'] = $this->product->getCat();
 		$this->load->view('apps/product/create',$data);
 	}
 
@@ -90,7 +90,7 @@ class Product extends MY_Controller {
 		}
 		$data['user'] = $this->user;
 		$data['product']= $this->product->get_by_id('products', $id);
-		$data['categories']=$this->product->select('categories');
+		$data['categories'] = $this->product->getCat();
 		$this->load->view('apps/product/edit', $data);
 	}
 }

@@ -9,8 +9,8 @@
     <li class="<?php echo ($active == 'category') ? 'active': ''; ?>">
         <a href="<?php echo base_url(); ?>category"><i class="fa fa-angle-right"></i>Category</a>
     </li>
-    <li class="<?php echo ($active == 'promotion') ? 'active': ''; ?>">
-        <a href="<?php echo base_url(); ?>promotion"><i class="fa fa-angle-right"></i>Promotion</a>
+    <li class="<?php echo ($active == 'feedback') ? 'active': ''; ?>">
+        <a href="<?php echo base_url(); ?>feedback"><i class="fa fa-angle-right"></i>Feedback</a>
     </li>
     <li class="<?php echo ($active == 'about') ? 'active': ''; ?>">
         <a href="<?php echo base_url(); ?>about"><i class="fa fa-angle-right"></i>About</a>

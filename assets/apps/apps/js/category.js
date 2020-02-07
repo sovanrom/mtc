@@ -18,6 +18,7 @@ $(function () {
         columns: [
             {data: 'id', visible: false},
             {data: 'name'},
+            {data: 'parent'},
             {data: 'description'},
             {data: 'Actions', searchable: false, orderable: false, width: '1%', bSortable:false}
         ],

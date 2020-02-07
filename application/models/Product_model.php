@@ -27,4 +27,12 @@ class Product_model extends MY_Model {
 		$this->datatables->unset_column('id');
 		return $this->datatables->generate();
 	}
+	public function getCat()
+	{
+		$this->db->select('*');
+		$this->db->from('categories');
+		$this->db->where('status', 1);
+		$this->db->where('parent', 0);
+		return $this->db->get()->result();
+	}
 }

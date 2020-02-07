@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <div class="container-fluid">
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="code">Code</label>
@@ -9,7 +10,8 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="name">Name</label>
@@ -19,7 +21,8 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="price">Price</label>
@@ -29,19 +32,21 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="form-group">
-                    <label class="col-sm-3" for="category">Category</label>
-                <div class="col-sm-9">
-                    <select class="form-control" name="category_id">
-                        <option value="">-</option>
-                        <?php foreach ($categories as $category) : ?>
-                            <option value="<?php echo $category->id ?>" <?php echo isset($product)? ($product->category_id==$category->id)? 'selected': '' :''; ?>><?php echo $category->name; ?></option>
-                        <?php endforeach ?>
-                    </select>
-                </div>
+            <label class="col-sm-3" for="category">Category</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="category_id">
+                    <option value="">-</option>
+                    <?php foreach ($categories as $category) : ?>
+                        <option value="<?php echo $category->id ?>" <?php echo isset($product)? ($product->category_id==$category->id)? 'selected': '' :''; ?>><?php echo $category->name; ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
         </div>
-
+    </div><br>
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3">
             <label for="description">Description</label>
@@ -51,7 +56,8 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
@@ -62,7 +68,8 @@
             <?php endif ?>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="form-group">
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
@@ -73,6 +80,7 @@
             <span class="help-block error-message"></span>
             </div>
         </div>
+    </div>
 
         <div class="form-group">
             <div class="col-sm-3"></div>

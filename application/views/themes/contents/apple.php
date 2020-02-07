@@ -5,9 +5,9 @@
 	</div>
 	<div class="row">
 	<?php foreach ($apples as $apple) :?>
-	<div style="margin: 20px;" class="col-sm-2">	
+	<div style="margin: 20px;" class="col-sm-2 click" data-id="<?php echo $apple->id; ?>">	
 		<div class="polaroid">
-		  <img src="<?php echo base_url(); ?>uploads/products/<?php echo $apple->image; ?>" alt="5 Terre"style="width:100%">
+		  <img src="<?php echo base_url(); ?>uploads/products/<?php echo $apple->image; ?>" alt="5 Terre"style="width:100%; height: 200px;">
 		  <div class="text">
 			  <p class="card-text" style="color: red;"><?php echo $apple->price.' $'; ?></p>
 			  <p class="card-text" ><?php echo $apple->description; ?></p>

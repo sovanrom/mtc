@@ -42,6 +42,7 @@
     	}
     	img {
     	  border-radius: 8px;
+    	  
     	}
 
     	div.polaroid {
@@ -55,12 +56,17 @@
     	  text-align: center;
     	  padding: 10px 20px;
     	}
+    	footer{
+    		clear: both;
+    		position: relative;
+    		height: 200px;
+    		margin-top: -200px;
+    	}
     </style>
 </head>
 <body >	
 	<br>
 	<!-- Page Container -->
-	
 		<!-- Header -->
 		<?php $this->load->view('themes/header'); ?>	
 		<!-- Main Content -->
@@ -69,7 +75,7 @@
 	
 	<footer >
 	<!-- Footer -->
-	<!-- <?php $this->load->view('themes/footer'); ?> -->
+	<?php $this->load->view('themes/footer'); ?> 
 	<!-- Analytics -->
 	</footer>
 	

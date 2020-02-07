@@ -1,14 +1,30 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends MY_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+	}
 	public function index()
 	{
 		
 		$data['new_products'] = $this->get_new_product();
 		$data['apples'] = $this->apple();
+		$data['oppos'] = $this->oppo();
+		$data['vivos'] = $this->vivo();
+		$data['samsungs'] = $this->samsung();
+		$data['huaweis'] = $this->huawei();
 		$this->load->view('theme',$data);
+	}
+	public function order($id='')
+	{
+		$this->db->select('*')
+				 ->from('products')
+				 ->where('id', $id);
+		$data['order'] = $this->db->get()->row();
+		$this->load->view('themes/contents/order', $data);
 	}
 	protected function get_new_product()
 	{
@@ -34,6 +50,61 @@ class Home extends CI_Controller {
 		return $this->db->get()->result();
 	}
 
+	protected function oppo()
+	{
+		$this->db->select('products.id')	
+				 ->select('products.price')	
+				 ->select('products.description')	
+				 ->select('products.image')	
+				 ->from('products')
+				 ->where('products.status', 1)
+				 ->where('products.active', 1)
+				 ->where('categories.name', 'Oppo')
+				 ->join('categories', 'categories.id = products.category_id');
+		return $this->db->get()->result();
+	}
+
+	protected function huawei()
+	{
+		$this->db->select('products.id')	
+				 ->select('products.price')	
+				 ->select('products.description')	
+				 ->select('products.image')	
+				 ->from('products')
+				 ->where('products.status', 1)
+				 ->where('products.active', 1)
+				 ->where('categories.name', 'Huawei')
+				 ->join('categories', 'categories.id = products.category_id');
+		return $this->db->get()->result();
+	}
+	protected function vivo()
+	{
+		$this->db->select('products.id')	
+				 ->select('products.price')	
+				 ->select('products.description')	
+				 ->select('products.image')	
+				 ->from('products')
+				 ->where('products.status', 1)
+				 ->where('products.active', 1)
+				 ->where('categories.name', 'Vivo')
+				 ->join('categories', 'categories.id = products.category_id');
+		return $this->db->get()->result();
+	}
+
+	protected function samsung()
+	{
+		$this->db->select('products.id')	
+				 ->select('products.price')	
+				 ->select('products.description')	
+				 ->select('products.image')	
+				 ->from('products')
+				 ->where('products.status', 1)
+				 ->where('products.active', 1)
+				 ->where('categories.name', 'Samsung')
+				 ->join('categories', 'categories.id = products.category_id');
+		return $this->db->get()->result();
+	}
+
 	protected function get_about()
 	{
 		$this->db->select('name')	
@@ -53,6 +124,22 @@ class Home extends CI_Controller {
 		return $this->db->get()->row();
 	}
 	
+	public function contact()
+	{
+		if (!empty($this->input->post())) {
+			$feedback = array(
+				'name' => $this->input->post('name'), 
+				'phone' => $this->input->post('phone'), 
+				'feedback' => $this->input->post('feedback'),
+				'date' => $this->timestamp
+			);
+			$message = ($this->db->insert('feedbacks', $feedback)) ? array('status' => 1) : array('status' => 0);
+			echo json_encode($message);
+			return '';
+		}
+		$this->load->view('themes/contents/feedback');
+	}
+
 	public function about_us()
 	{
 		$data['about'] = $this->get_about();
