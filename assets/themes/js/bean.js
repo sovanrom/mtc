@@ -61,9 +61,31 @@ $(document).ready(function() {
         });
     }
 
+    function order() {
+        $.ajax({
+            url: $('#order_form').attr('action'),
+            type: 'POST',
+            dataType: 'json',
+            data: new FormData($('#order_form')[0]),
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                if(response.status == '1'){
+                    $('#bean_modal').modal('hide');
+                    window.location.replace(base_url+'/home');
+                }
+            }
+        });
+    }
+
    $('#bean_modal').on('click', '#submit', function(event) {
         event.preventDefault();
         create();
+    });
+
+   $('#bean_modal').on('click', '#submitOrder', function(event) {
+        event.preventDefault();
+        order();
     });
     $('.click').on('click', function(event) {
         event.preventDefault();

@@ -20,12 +20,41 @@ class Home extends MY_Controller {
 	}
 	public function order($id='')
 	{
+		if (!empty($this->input->post('name'))) {
+			$order = array(
+				'product_id' => $this->input->post('product_id'), 
+				'order_name' => $this->input->post('name'), 
+				'phone' => $this->input->post('phone'), 
+				'qty' => $this->input->post('qty'),
+				'date' => $this->timestamp
+			);
+			$message= ($this->db->insert('orders', $order))?  array('status' => 1) :  array('status '=> 0 );
+			echo json_encode($message);
+			return '';
+		}
 		$this->db->select('*')
 				 ->from('products')
 				 ->where('id', $id);
 		$data['order'] = $this->db->get()->row();
 		$this->load->view('themes/contents/order', $data);
 	}
+
+	public function contact()
+	{
+		if (!empty($this->input->post())) {
+			$feedback = array(
+				'name' => $this->input->post('name'), 
+				'phone' => $this->input->post('phone'), 
+				'feedback' => $this->input->post('feedback'),
+				'date' => $this->timestamp
+			);
+			$message = ($this->db->insert('feedbacks', $feedback)) ? array('status' => 1) : array('status' => 0);
+			echo json_encode($message);
+			return '';
+		}
+		$this->load->view('themes/contents/feedback');
+	}
+
 	protected function get_new_product()
 	{
 		$this->db->select('*')	
@@ -122,22 +151,6 @@ class Home extends MY_Controller {
 				 ->where('status', 1)
 				 ->where('name', 'Vision');
 		return $this->db->get()->row();
-	}
-	
-	public function contact()
-	{
-		if (!empty($this->input->post())) {
-			$feedback = array(
-				'name' => $this->input->post('name'), 
-				'phone' => $this->input->post('phone'), 
-				'feedback' => $this->input->post('feedback'),
-				'date' => $this->timestamp
-			);
-			$message = ($this->db->insert('feedbacks', $feedback)) ? array('status' => 1) : array('status' => 0);
-			echo json_encode($message);
-			return '';
-		}
-		$this->load->view('themes/contents/feedback');
 	}
 
 	public function about_us()
