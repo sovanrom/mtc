@@ -3,6 +3,9 @@
     <li class="<?php echo ($active == 'dashboard') ? 'active': ''; ?>">
         <a href="<?php echo base_url(); ?>dashboard"></i>Dashboard</a>
     </li>
+    <li class="<?php echo ($active == 'order') ? 'active': ''; ?>">
+        <a href="<?php echo base_url(); ?>order"><i class="fa fa-angle-right"></i>Ordering</a>
+    </li>
     <li class="<?php echo ($active == 'product') ? 'active': ''; ?>">
         <a href="<?php echo base_url(); ?>product"><i class="fa fa-angle-right"></i>Products</a>
     </li>
