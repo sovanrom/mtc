@@ -5,7 +5,7 @@
 	</div>
 	<div class="row">
 	<?php foreach ($oppos as $oppo) :?>
-	<div style="margin: 20px;" class="col-sm-2" id="click" data-id="<?php echo $oppo->id; ?>">	
+	<div style="margin: 20px;" class="col-sm-2 click" id="click" data-id="<?php echo $oppo->id; ?>">	
 		<div class="polaroid">
 		  <img src="<?php echo base_url(); ?>uploads/products/<?php echo $oppo->image; ?>" alt="5 Terre"style="width:100%; height: 200px;">
 		  <div class="text">

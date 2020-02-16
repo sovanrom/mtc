@@ -7,14 +7,14 @@
         <div class="row form-group">
             <label for="name" class="row control-label">Name *</label>
             <div class="row">
-                <input type="text" name="name"  class="form-control" id="name">
+                <input type="text" autocomplete="off" name="name"  class="form-control" id="name">
             </div>
         </div>
 
         <div class="row form-group">
             <label for="phone" class="row control-label">Phone Number *</label>
             <div class="row">
-                <input type="text" name="phone"  class="form-control" id="phone">
+                <input type="text" autocomplete="off" name="phone"  class="form-control" id="phone">
             </div>
         </div>
 

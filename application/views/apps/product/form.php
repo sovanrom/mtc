@@ -6,7 +6,7 @@
             <label for="code">Code</label>
             </div>
             <div class="col-sm-9">
-            <input type="text" name="code" id="code" value="<?php echo isset($product) ? $product->code : ''; ?>" class="form-control">
+            <input type="text" name="code" autocomplete="off" id="code" value="<?php echo isset($product) ? $product->code : ''; ?>" class="form-control">
             <span class="help-block error-message"></span>
             </div>
         </div>
@@ -17,7 +17,7 @@
             <label for="name">Name</label>
             </div>
             <div class="col-sm-9">
-            <input type="text" name="name" id="name" value="<?php echo isset($product) ? $product->name : ''; ?>" class="form-control">
+            <input type="text" name="name" autocomplete="off" id="name" value="<?php echo isset($product) ? $product->name : ''; ?>" class="form-control">
             <span class="help-block error-message"></span>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <label for="price">Price</label>
             </div>
             <div class="col-sm-9">
-            <input type="text" name="price" id="price" value="<?php echo isset($product) ? $product->price : ''; ?>" class="form-control">
+            <input type="text" name="price" autocomplete="off" id="price" value="<?php echo isset($product) ? $product->price : ''; ?>" class="form-control">
             <span class="help-block error-message"></span>
             </div>
         </div>
@@ -74,7 +74,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
             <div class="input-group">
-                <input type="file" name='image' id="image" class="form-control">
+                <input type="file" name='image' autocomplete="off" id="image" class="form-control">
                 <input type="hidden" name='file_name' value="<?php echo (isset($product)) ? $product->image : ''; ?>">
             </div>
             <span class="help-block error-message"></span>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-sm-3">
             <label>
-                <input type="checkbox" id="is_new" name="is_new" <?php echo isset($product) ? $product->is_new == 1 ? 'checked': '' : ''; ?> class="minimal">
+                <input type="checkbox" id="is_new" autocomplete="off" name="is_new" <?php echo isset($product) ? $product->is_new == 1 ? 'checked': '' : ''; ?> class="minimal">
                 Is_New?
             </label>
             </div>

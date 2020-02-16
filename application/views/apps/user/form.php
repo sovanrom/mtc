@@ -5,7 +5,7 @@
     <label for="username">User name</label>
     </div>
     <div class="col-sm-9">
-    <input type="text" name="username" id="username" value="<?php echo isset($user) ? $user->username : ''; ?>" class="form-control">
+    <input type="text" name="username" autocomplete="off" id="username" value="<?php echo isset($user) ? $user->username : ''; ?>" class="form-control">
     <span class="help-block error-message"></span>
     </div>
 </div>
@@ -15,7 +15,7 @@
     <label for="email">Email</label>
     </div>
     <div class="col-sm-9">
-    <input type="text" name="email" id="email" value="<?php echo isset($user) ? $user->email : ''; ?>" class="form-control">
+    <input type="text" name="email" autocomplete="off" id="email" value="<?php echo isset($user) ? $user->email : ''; ?>" class="form-control">
     <span class="help-block error-message"></span>
     </div>
 </div>

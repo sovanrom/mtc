@@ -22,7 +22,7 @@
 			<div class="form-group col-sm-12">
 				<label class="col-sm-3">Name*</label>
 				<div class="col-sm-9">
-					<input type="text" name="name" class="form-control">
+					<input type="text" autocomplete="off" name="name" class="form-control">
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 			<div class="form-group col-sm-12">
 				<label class="col-sm-3">Phone*</label>
 				<div class="col-sm-9">
-					<input type="text" name="phone" class="form-control">
+					<input type="text" autocomplete="off" name="phone" class="form-control">
 				</div>
 			</div>
 		</div>

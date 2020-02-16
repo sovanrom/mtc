@@ -6,7 +6,7 @@
             <label for="name">Name</label>
             </div>
             <div class="col-sm-9">
-            <input type="text" name="name" id="name" value="<?php echo isset($category) ? $category->name : ''; ?>" class="form-control">
+            <input type="text" name="name" autocomplete="off" id="name" value="<?php echo isset($category) ? $category->name : ''; ?>" class="form-control">
             <span class="help-block error-message"></span>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-3">
             <label>
-                <input type="checkbox" id="status" name="status" <?php echo isset($category) ? $category->status == 1 ? 'checked': '' : 'checked'; ?> class="minimal">
+                <input type="checkbox" id="status" autocomplete="off" name="status" <?php echo isset($category) ? $category->status == 1 ? 'checked': '' : 'checked'; ?> class="minimal">
                 Status
             </label>
             </div>

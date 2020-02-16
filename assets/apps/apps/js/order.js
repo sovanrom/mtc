@@ -28,8 +28,8 @@ $(function () {
                 fnCreatedCell: function (nTd, sData, oData, iRow, iCol){
                     (oData.status === '1')? $(nTd).html('<button class="btn btn-danger">Wating confirm</button>') : ''; 
                     (oData.status === '2')? $(nTd).html('<button class="btn btn-success">Confirmed Order</button>') : ''; 
-                    (oData.status === '3')? $(nTd).html('<button class="btn btn-success">Wating Recieve</button>') : ''; 
-                    (oData.status === '4')? $(nTd).html('<button class="btn btn-success">Wating Feedback</button>') : ''; 
+                    (oData.status === '3')? $(nTd).html('<button class="btn btn-warning">Wating Recieve</button>') : ''; 
+                    (oData.status === '4')? $(nTd).html('<button class="btn btn-primary">Wating Feedback</button>') : ''; 
                 },
             },
             {data: 'actions', searchable: false, orderable: false, width: '1%', bSortable:false}
@@ -77,8 +77,9 @@ $(function () {
              success: function(html) {
                  $('#bean_modal').find('.modal-title').html('Order info');
                  $('#bean_modal').find('.modal-body').html(html);
-                 $('#bean_modal').find('#click_submit').data("state", "create").html('<i class="fa fa-save"></i>&nbsp; Save');
+                 // $('#bean_modal').find('#click_submit').data("state", "create").html('<i class="fa fa-save"></i>&nbsp; Save');
                  $('#bean_modal').modal('show');
+
              }
          });
      });
