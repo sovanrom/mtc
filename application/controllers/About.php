@@ -15,6 +15,7 @@ class About extends MY_Controller {
 		$data['active'] = 'about';
 		$data['title'] = 'about';
 		$data['content'] = 'apps/about/index';
+		$data['user'] = $this->user;
 		$this->load->view('app', $data);
 	}
 

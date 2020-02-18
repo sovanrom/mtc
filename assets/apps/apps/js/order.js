@@ -77,9 +77,9 @@ $(function () {
              success: function(html) {
                  $('#bean_modal').find('.modal-title').html('Order info');
                  $('#bean_modal').find('.modal-body').html(html);
-                 // $('#bean_modal').find('#click_submit').data("state", "create").html('<i class="fa fa-save"></i>&nbsp; Save');
+                 $('#bean_modal').find('#click_submit').data("state", "create").html('<i class="fa fa-save"></i>&nbsp; Save');
                  $('#bean_modal').modal('show');
-
+                 $('.modal-footer').hide();
              }
          });
      });
@@ -98,7 +98,7 @@ $(function () {
            i--;
            $('#qty').val(i);
        });
-
+    $('.modal-footer').show();
 
    });
 
@@ -125,18 +125,5 @@ $(function () {
          createUpdate();
        
     });
-    table.on('click', '.remove', function(e) {
-        e.preventDefault();
-        var url = $(this).attr('href');
-        if (confirm("Are you sure?")) {
-            $.ajax({
-                url: url,
-                type: 'POST',
-                dataType: 'json',
-                success: function(response) {
-                    (response.status == '1') ? $('#order').DataTable().ajax.reload() : '';
-                }
-            });
-        }
-    });
+    
 });

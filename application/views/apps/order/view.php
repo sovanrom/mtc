@@ -23,7 +23,7 @@
 		</div>
 		<div class="row">
 			<h5 class="col-sm-5"><b>Quantity</b></h5><div class="col-sm-1"><h5>:</h5></div>
-			<h5 class="col-sm-6" style="color: red;">$<?php echo isset($order)? $order->quantity : ''; ?></h5>
+			<h5 class="col-sm-6" style="color: red;"><?php echo isset($order)? $order->quantity : ''; ?></h5>
 		</div>
 		<div class="row">
 			<h5 class="col-sm-5"><b>Total</b></h5><div class="col-sm-1"><h5>:</h5></div>
