@@ -24,7 +24,7 @@ date_default_timezone_set('Asia/Phnom_Penh');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8888/mtc/';
+$config['base_url'] = 'http://localhost/mtc/';
 
 /*
 |--------------------------------------------------------------------------
