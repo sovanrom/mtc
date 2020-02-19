@@ -62,7 +62,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
             <?php if (isset($product) && !empty($product->image)): ?>
-                <img id="show_image" src="<?php echo base_url(); ?>/uploads/products/<?php echo $product->image; ?>"/>
+                <img id="show_image" src="<?php echo base_url(); ?>uploads/products/<?php echo $product->image; ?>"/>
             <?php else: ?>
                 <img id="show_image" style="display: none;" />
             <?php endif ?>
