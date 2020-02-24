@@ -13,6 +13,7 @@ class Feedback extends MY_Controller {
 	{
 		$data['scripts'] = array('feedback');
 		$data['active'] = 'feedback';
+		$data['user'] = $this->user;
 		$data['title'] = 'feedback';
 		$data['content'] = 'apps/feedback/index';
 		$this->load->view('app', $data);

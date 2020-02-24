@@ -13,6 +13,7 @@ class About extends MY_Controller {
 	{
 		$data['scripts'] = array('about');
 		$data['active'] = 'about';
+		$data['user'] = $this->user;
 		$data['title'] = 'about';
 		$data['content'] = 'apps/about/index';
 		$data['user'] = $this->user;

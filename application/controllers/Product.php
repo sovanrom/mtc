@@ -14,6 +14,7 @@ class Product extends MY_Controller {
 		$data['scripts'] = array('product');
 		$data['active'] = 'product';
 		$data['title'] = 'Product';
+		$data['user'] = $this->user;
 		$data['content'] = 'apps/product/index';
 		$this->load->view('app', $data);
 	}

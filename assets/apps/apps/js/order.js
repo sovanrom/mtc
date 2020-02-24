@@ -38,6 +38,11 @@ $(function () {
 
     });
 
+    if ($('#order').data('user') == 2) {
+      $('#ordering_menu').hide();
+      $('#feedback_menu').hide();
+    }
+
     table.on('click', '.edit', function(event) {
         event.preventDefault();
         $.ajax({

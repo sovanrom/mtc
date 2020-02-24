@@ -13,6 +13,7 @@ class Category extends MY_Controller {
 	{
 		$data['scripts'] = array('category');
 		$data['active'] = 'category';
+		$data['user'] = $this->user;
 		$data['title'] = 'category';
 		$data['content'] = 'apps/category/index';
 		$this->load->view('app', $data);

@@ -58,7 +58,11 @@ $(function () {
         });
     });
 
-   
+     if ($('#product').data('user') == 2) {
+       $('#ordering_menu').hide();
+       $('#feedback_menu').hide();
+     }
+
    function createUpdate() {      
         $.ajax({
             url: $('#form_product').attr('action'),

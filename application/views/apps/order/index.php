@@ -4,7 +4,7 @@
         <div class="col-xs-12">
             <div class="box box-primary">
                 <div class="box-body">
-                    <table id="order" class="table table-bordered table-striped dataTable table-hover">
+                    <table id="order" class="table table-bordered table-striped dataTable table-hover" data-user="<?php echo $user ?>">
                         <thead>
                             <tr>
                                 <th class="col-xs-1">#</th>

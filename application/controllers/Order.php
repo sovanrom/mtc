@@ -13,6 +13,7 @@ class Order extends MY_Controller {
 	{
 		$data['scripts'] = array('order');
 		$data['active'] = 'order';
+		$data['user'] = $this->user;
 		$data['title'] = 'order';
 		$data['content'] = 'apps/order/index';
 		$this->load->view('app', $data);
