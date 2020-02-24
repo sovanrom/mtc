@@ -26,12 +26,12 @@
         <li><a href="#oppo">Oppo</a></li>
         <li><a href="#vivo">Vivo</a></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+      <!-- <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </nav>
