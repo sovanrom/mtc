@@ -35,7 +35,7 @@
         <h6 class="text-uppercase font-weight-bold">Useful links</h6>
         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a class="dark-grey-text" href="https://www.facebook.com/profile.php?id=100009062784287&ref=bookmarks">Facebook</a>
+          <a class="dark-grey-text" href="https://web.facebook.com/profile.php?id=100005547258313">Facebook</a>
         </p>
 
       </div>

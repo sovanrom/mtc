@@ -30,9 +30,9 @@
     </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper" style="background:green;">
+    <div class="wrapper" >
         <header class="main-header">
-            <a href="<?php echo base_url(); ?>" class="logo">
+            <a href="<?php echo base_url(); ?>" class="logo" style="background: #336600;">
                <!--  <span class="logo-mini"><b>P</b></span> -->
                 <span class="logo-lg"><b>To Lemon Case</b></span>
             </a>
