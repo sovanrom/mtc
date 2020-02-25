@@ -1,8 +1,5 @@
 <ul class="sidebar-menu" data-widget="tree">
     <li class="header">MAIN NAVIGATION</li>
-    <li class="<?php echo ($active == 'dashboard') ? 'active': ''; ?>">
-        <a href="<?php echo base_url(); ?>dashboard"></i>Dashboard</a>
-    </li>
     <li id="ordering_menu" class="<?php echo ($active == 'order') ? 'active': ''; ?>">
         <a href="<?php echo base_url(); ?>order"><i class="fa fa-angle-right"></i>Ordering</a>
     </li>
