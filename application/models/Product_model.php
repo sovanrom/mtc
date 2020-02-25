@@ -11,6 +11,7 @@ class Product_model extends MY_Model {
 						->select('products.name')
 						->select('price')
 						->select('products.description')
+						->select('products.active')
 						->select('categories.id as category_id')
 						->where('products.status',1)
 						->from('products')

@@ -22,6 +22,12 @@ $(function () {
             {data: 'price'},
             {data: 'category_id'},
             {data: 'description'},
+            {data: 'active', orderable: false, searchable: false, width: '1%', 'className':'text-center',
+                fnCreatedCell: function (nTd, sData, oData, iRow, iCol){
+                    (oData.active === '1')? $(nTd).html('<a class="btn btn-success">posting</a>') : ''; 
+                    (oData.active === '0')? $(nTd).html('<a class="btn btn-primary">pending post</a>') : ''; 
+                },
+            },
             {data: 'Actions', searchable: false, orderable: false, width: '1%', bSortable:false}
         ],
         order:[[0, "desc"]]

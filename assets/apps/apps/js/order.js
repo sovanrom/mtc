@@ -24,12 +24,12 @@ $(function () {
             {data: 'qty'},
             {data: 'description'},
             {data: 'date'},
-            {data: 'status', orderable:false , searchable: false,
+            {data: 'status', orderable:false , searchable: false, 'className':'text-center',
                 fnCreatedCell: function (nTd, sData, oData, iRow, iCol){
-                    (oData.status === '1')? $(nTd).html('<button class="btn btn-danger">Wating confirm</button>') : ''; 
-                    (oData.status === '2')? $(nTd).html('<button class="btn btn-success">Confirmed Order</button>') : ''; 
-                    (oData.status === '3')? $(nTd).html('<button class="btn btn-warning">Wating Recieve</button>') : ''; 
-                    (oData.status === '4')? $(nTd).html('<button class="btn btn-primary">Wating Feedback</button>') : ''; 
+                    (oData.status === '1')? $(nTd).html('<a class="btn btn-danger">wating confirm</a>') : ''; 
+                    (oData.status === '2')? $(nTd).html('<a class="btn btn-success">confirmed order</a>') : ''; 
+                    (oData.status === '3')? $(nTd).html('<a class="btn btn-warning">wating recieve</a>') : ''; 
+                    (oData.status === '4')? $(nTd).html('<a class="btn btn-primary">wating feedback</a>') : ''; 
                 },
             },
             {data: 'actions', searchable: false, orderable: false, width: '1%', bSortable:false}
