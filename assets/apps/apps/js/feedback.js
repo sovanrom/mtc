@@ -34,6 +34,11 @@ $(function () {
 
     $('.breadcrumb').hide();
 
+    $('#bean_modal').on('show.bs.modal', function() {
+        $(this).find('.modal-footer').hide();
+    });
+
+
     table.on('click', '.view', function(e) {
         e.preventDefault();
         $.ajax({
