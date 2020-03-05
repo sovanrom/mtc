@@ -16,7 +16,7 @@
                           <div class="col-sm-8">
                             <div class="row" style="text-align: center;">
                               <h4>This new cases are avialable in our Store please place an order or visit our store</h4>
-                              <h5><i class="fa fa-home mr-3"></i> <?php echo ' '; ?>Address:  Address: #38 Street 337, Phnom Penh </h5>
+                              <h5><i class="fa fa-home mr-3"></i> <?php echo ' '; ?>Address: #38 Street 337, Phnom Penh </h5>
                               <h5><i class="fa fa-phone mr-3"></i><?php echo ' '; ?>Phone: 016-800067.</h5> 
                               <h5><i class="fa fa-envelope mr-3"></i><?php echo ' '; ?>Email: yeansovanrom8@gmail.com.</h5>
                               <h5>Opening hours:24/h</h5> 
